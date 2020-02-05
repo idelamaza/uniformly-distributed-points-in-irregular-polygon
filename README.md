@@ -365,8 +365,6 @@ PD.get_cluster_centers()
 ```
 
 
-
-
     array([[ 2.17629449, 41.39163003],
            [ 2.16385474, 41.39135744],
            [ 2.16626309, 41.39882316],
@@ -379,15 +377,12 @@ PD.get_cluster_centers()
            [ 2.17050998, 41.39940806]])
 
 
-
 ## Applying it to the previously described case study
 
 
-
-
 ```python
-CLIENT_ID = 'FZWQT5RYYRNBRD3KYK50VXNZ2APAF5MTKDCNEAEK1T0EWAQG' # your Foursquare ID
-CLIENT_SECRET = 'UQFRDRPQM1JNCB3TSLXKZNMECFJWSBYOCU2N2KGPQFMVMKIY' # your Foursquare Secret
+CLIENT_ID = '####' # your Foursquare ID
+CLIENT_SECRET = '####' # your Foursquare Secret
 VERSION = '20180601'
 ```
 
@@ -418,24 +413,6 @@ for venue in tqdm(all_venues, total = len(all_venues)):
     if polygon.contains(Point(venue[0],venue[1])):
         venue_list.append(venue)
 ```
-
-    Performing the API calls:
-
-
-
-    HBox(children=(FloatProgress(value=0.0, max=15.0), HTML(value='')))
-
-
-    
-    Checking which venues are inside the polygon:
-
-
-
-    HBox(children=(FloatProgress(value=0.0, max=1816.0), HTML(value='')))
-
-
-    
-
 
 
 ```python
@@ -510,33 +487,6 @@ plt.axis('off')
 plt.show()
 ```
 
-    Performing the API calls:
-
-
-
-    HBox(children=(FloatProgress(value=0.0, max=200.0), HTML(value='')))
-
-
-    
-    Checking which venues are inside the polygon:
-
-
-
-    HBox(children=(FloatProgress(value=0.0, max=9806.0), HTML(value='')))
-
-
-    
-    Plotting the venues:
-
-
-
-    HBox(children=(FloatProgress(value=0.0, max=8692.0), HTML(value='')))
-
-
-    
-
-
-
 ![png](/img/output_34_7.png)
 
 
@@ -575,48 +525,6 @@ venue_num = []
 for call_num in tqdm(calls, total = len(calls)):
     venue_num.append(calculate_venue_num(call_num)) 
 ```
-
-
-    HBox(children=(FloatProgress(value=0.0, max=29.0), HTML(value='')))
-
-
-    
-
-
-
-
-
-    [1216,
-     2374,
-     3531,
-     4686,
-     5679,
-     6508,
-     7101,
-     7545,
-     7891,
-     8147,
-     8402,
-     8521,
-     8579,
-     8589,
-     8634,
-     8636,
-     8679,
-     8665,
-     8686,
-     8684,
-     8696,
-     8701,
-     8695,
-     8699,
-     8698,
-     8700,
-     8700,
-     8697,
-     8699]
-
-
 
 
 ```python
